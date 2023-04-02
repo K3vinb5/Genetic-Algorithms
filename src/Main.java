@@ -2,8 +2,8 @@ public class Main {
 
     public static void main(String[] args) {
         //Variables
-        int individualSize = 15;
-        int generationSize = 100;
+        int individualSize = 20;
+        int generationSize = 60;
         int maxIterations = 10000;
         boolean solutionFound = false;
 
@@ -22,6 +22,7 @@ public class Main {
         }
         if (!solutionFound){
             System.out.println("Solution not found");
+            System.out.println("Best Found: " + genA.getIndividualList().get(0) + "\nBest Score possible: " + ((genA.getIndividualSize()*(genA.getIndividualSize() - 1))/2));
         }
         long endTime = System.currentTimeMillis();
 
